@@ -1,4 +1,4 @@
-const createEmployeeRecord = (employee) => {
+const createEmployeeRecord = employee => {
     const recordObject = {
         firstName: employee[0],
         familyName: employee[1],
@@ -10,7 +10,7 @@ const createEmployeeRecord = (employee) => {
     return recordObject 
 }
 
-const createEmployeeRecords = (dataEmployees) => {
+const createEmployeeRecords = dataEmployees => {
     const newRecordsList = []
     dataEmployees.forEach(employee => {
         newRecordsList.push(createEmployeeRecord(employee))
@@ -68,7 +68,7 @@ const findEmployeeByFirstName = (arrOfEmployeeObject, firstName) => {
     return arrOfEmployeeObject.find(employee => firstName === employee.firstName)
 }
 
-const calculatePayroll = (arrOfEmployeeObject) => {
+const calculatePayroll = arrOfEmployeeObject => {
     let totalWages = 0
     arrOfEmployeeObject.forEach(element => {
         totalWages += allWagesFor.call(element)
